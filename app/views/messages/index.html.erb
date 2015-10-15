@@ -20,12 +20,12 @@
     
 <%= f.text_field :name %>
 
-
+    
     内容：
 
-<%= f.text_field :body %>
+<span style="position:absolute;"><%= f.text_area :body %></span>
 
-
-<%= f.submit class: "btn btn-sm btn-primary" %>
+<br />
+<span style="float:right;"><%= f.submit class: "btn btn-sm btn-primary" %></span>
 
 <% end %>
