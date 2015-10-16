@@ -25,31 +25,27 @@
                     <% end %>
                 </ul>
         </div>
+    <% end %>
+    <div class="form-group">
+        <label class="col-sm-1 control-label">名前：</label>
+        <div class="col-sm-6">
+            <%= f.text_field :name, size:40, maxlength:20, class: "form-control" %>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-1 control">内容：</label>
+        <div class="col-sm-6">
+            <%= f.text_area :body, class:"form-control"%>
+        </div>
+        <div class="col-sm-5"></div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-1"></div>
+            <div class="col-sm-6">
+                <%= f.submit class: "btn btn-sm btn-primary" %>
+            </div>
+        <div class="col-sm-5"></div>
+    </div>
 <% end %>
 
-
-<div class="form-group">
-    <label class="col-sm-1 control-label">名前：</label>
-    <div class="col-sm-6">
-        <%= f.text_field :name, size:40, maxlength:20, class: "form-control" %>
-    </div>
-</div>
-
-<div class="form-group">
-    <label class="col-sm-1 control">内容：</label>
-    <div class="col-sm-6">
-        <%= f.text_area :body, class:"form-control"%>
-    </div>
-    <div class="col-sm-5"></div>
-</div>
-
-<div class="form-group">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-6">
-        <%= f.submit class: "btn btn-sm btn-primary" %>
-    </div>
-    <div class="col-sm-5"></div>
-</div>
-
-
-<% end %>
+<%= render 'form' %>
