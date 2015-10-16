@@ -14,40 +14,33 @@
 
 
 <%= form_for(@message, html: {class: "form-horizontal"}) do |f| %>
-
-<% if @message.errors.present? %>
-
-    <div class="alert alert-danger">
-        
-<%= alert %>
-
-        <ul>
-            
-<% @message.errors.full_messages.each do |full_message| %>
-
-            <li>
-                
-<%= full_message %>
-
-            </li>
+    <% if @message.errors.present? %>
+        <div class="alert alert-danger">
+            <%= alert %>
+                <ul>
+                    <% @message.errors.full_messages.each do |full_message| %>
+                        <li>
+                        <%= full_message %>
+                        </li>
+                    <% end %>
+                </ul>
+        </div>
 <% end %>
 
-        </ul>
+
+<div class="form-group">
+    <label class="col-sm-1 control-label">名前：</label>
+    <div class="col-sm-6">
+        <%= f.text_field :name, class: "form-control" %>
     </div>
-
-<% end %>
-
-
-<div class="form-grouprails">
-    名前：
-    
-<%= f.text_field :name, class: "form-control" %>
 </div>
 
 <div class="form-group">
-    内容：
-
-<%= f.text_area :body, class:"form-control"%>
+    <label class="col-sm-1 control">内容：</label>
+    <div class="col-sm-6">
+        <%= f.text_area :body, class:"form-control"%>
+    </div>
+    <div class="col-sm-5"></div>
 </div>
 
 <div class="form-group">
